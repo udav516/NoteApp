@@ -30,8 +30,8 @@ def main():
             note_manager.edit_note(id, title, body, date)
         elif choice == '4':
             id = int(input("Введите номер заметки: "))
-            title = input("Введите новое название заметки: ")
-            body = input("Введите новый текст заметки: ")
+            title = input("Введите название заметки: ")
+            body = input("Введите текст заметки: ")
             note_manager.search_note(id, title, body)
         elif choice == "5":
             id = int(input("Введите номер заметки: "))
