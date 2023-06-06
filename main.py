@@ -10,7 +10,8 @@ def main():
         1 - Список заметок
         2 - Добавить заметку
         3 - Редактировать заметку
-        4 - Удалить заметку
+        4 - Поиск заметки
+        5 - Удалить заметку
         0 - Выход""")
         choice = input()
 
@@ -27,7 +28,12 @@ def main():
             body = input("Введите новый текст заметки: ")
             date = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
             note_manager.edit_note(id, title, body, date)
-        elif choice == "4":
+        elif choice == '4':
+            id = int(input("Введите номер заметки: "))
+            title = input("Введите новое название заметки: ")
+            body = input("Введите новый текст заметки: ")
+            note_manager.search_note(id, title, body)
+        elif choice == "5":
             id = int(input("Введите номер заметки: "))
             note_manager.delete_note(id)
         elif choice == "0":

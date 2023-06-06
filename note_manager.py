@@ -44,3 +44,9 @@ def delete_note(id):
             notes.remove(note)
             save_notes()
             return print("Заметка удалена")
+
+
+def search_note(id, title, body,):
+    for note in notes:
+        if note["id"] == id or note["title"] == title or note["body"] == body:
+            return print(note)
